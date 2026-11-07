@@ -108,29 +108,28 @@ The `Optisystem/data/manifest.csv` file records simulation conditions, waveform 
 
 The received PAM4 signal contains four amplitude levels. The statistical separation between adjacent received levels is calculated using their conditional means and standard deviations.
 
-For adjacent levels \(k\) and \(k+1\):
+For adjacent levels $k$ and $k+1$:
 
-\[
+$$
 Q_k = \frac{\mu_{k+1}-\mu_k}{\sigma_{k+1}+\sigma_k}
-\]
+$$
 
 where:
 
-- \(\mu_k\) represents the mean received amplitude for PAM4 level \(k\).
-- \(\sigma_k\) represents the sample standard deviation of that level.
+- $\mu_k$ is the mean received amplitude for PAM4 level $k$.
+- $\sigma_k$ is the sample standard deviation of that level.
 
 Three adjacent-level Q estimates are obtained:
 
-\[
+$$
 Q_0,\quad Q_1,\quad Q_2
-\]
+$$
 
 The reported performance metric is:
 
-\[
-Q_{\min}=\min(Q_0,Q_1,Q_2)
-\]
-
+$$
+Q_{\min} = \min(Q_0, Q_1, Q_2)
+$$
 ### Computational Procedure
 
 1. Import the transmitted and received waveform files using Python and NumPy.
