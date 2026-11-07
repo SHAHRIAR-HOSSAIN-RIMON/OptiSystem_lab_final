@@ -1,7 +1,7 @@
 """Reproducible PAM4 adjacent-level statistical Q estimates from OptiSystem exports.
 
 Usage (requires numpy, matplotlib):
-    python PAM4_analyze_waveforms.py data.txt recieved.txt --fiber-km 5 --cutoff-ghz 7.5
+    python src/pam4_q.py data/waveforms/fiber_5km_7p5GHz/TX.txt data/waveforms/fiber_5km_7p5GHz/RX.txt --fiber-km 5 --cutoff-ghz 7.5
 
 Both files must be exported from the SAME OptiSystem calculation:
     TX oscilloscope (PAM Pulse Generator): Signal > Signal Amplitude > Single Pair
